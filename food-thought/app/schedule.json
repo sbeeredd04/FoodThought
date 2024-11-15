@@ -1,0 +1,926 @@
+{
+  "Monday": [
+    {
+      "time": "9:00 AM",
+      "employee": "Alice",
+      "role": "Chef",
+      "instructions": "Prepare breakfast"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "Bob",
+      "role": "Server",
+      "instructions": "Serve tables 1-3"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "Charlie",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "David",
+      "role": "Manager",
+      "instructions": "Supervise breakfast preparations"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Eve",
+      "role": "Chef",
+      "instructions": "Prepare pastries"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Frank",
+      "role": "Server",
+      "instructions": "Handle table 4"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Grace",
+      "role": "Cleaner",
+      "instructions": "Clean kitchen"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Heidi",
+      "role": "Manager",
+      "instructions": "Monitor customer feedback"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Ivan",
+      "role": "Server",
+      "instructions": "Serve tables 5-7"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Judy",
+      "role": "Chef",
+      "instructions": "Prepare soup of the day"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Kevin",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Laura",
+      "role": "Manager",
+      "instructions": "Manage lunch shift"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Mia",
+      "role": "Chef",
+      "instructions": "Prepare lunch items"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Nathan",
+      "role": "Server",
+      "instructions": "Serve tables 8-10"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Oliver",
+      "role": "Cleaner",
+      "instructions": "Clean service counter"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Paul",
+      "role": "Manager",
+      "instructions": "Supervise lunch preparations"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Quincy",
+      "role": "Server",
+      "instructions": "Serve dessert"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Rebecca",
+      "role": "Chef",
+      "instructions": "Prepare afternoon snacks"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Sam",
+      "role": "Cleaner",
+      "instructions": "Clean restrooms"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Tina",
+      "role": "Manager",
+      "instructions": "Oversee employee break schedule"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Uma",
+      "role": "Chef",
+      "instructions": "Prepare afternoon tea"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Victor",
+      "role": "Server",
+      "instructions": "Serve drinks"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Wendy",
+      "role": "Cleaner",
+      "instructions": "Clean pantry"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Xander",
+      "role": "Manager",
+      "instructions": "Inventory check"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Yvonne",
+      "role": "Server",
+      "instructions": "Serve snacks"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Zach",
+      "role": "Chef",
+      "instructions": "Prepare special orders"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Alice",
+      "role": "Cleaner",
+      "instructions": "Clean kitchen equipment"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Bob",
+      "role": "Manager",
+      "instructions": "Check staff performance"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Charlie",
+      "role": "Chef",
+      "instructions": "Prepare dinner items"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "David",
+      "role": "Server",
+      "instructions": "Handle table reservations"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Eve",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Frank",
+      "role": "Manager",
+      "instructions": "Monitor dinner preparations"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Grace",
+      "role": "Chef",
+      "instructions": "Prepare appetizers"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Heidi",
+      "role": "Server",
+      "instructions": "Serve tables 11-13"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Ivan",
+      "role": "Cleaner",
+      "instructions": "Clean the outdoor seating area"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Judy",
+      "role": "Manager",
+      "instructions": "Coordinate dinner rush"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Kevin",
+      "role": "Server",
+      "instructions": "Serve beverages"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Laura",
+      "role": "Chef",
+      "instructions": "Prepare main courses"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Mia",
+      "role": "Cleaner",
+      "instructions": "Clean up after main course"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Nathan",
+      "role": "Manager",
+      "instructions": "Supervise kitchen operations"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Oliver",
+      "role": "Server",
+      "instructions": "Serve desserts"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Paul",
+      "role": "Chef",
+      "instructions": "Prepare desserts"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Quincy",
+      "role": "Cleaner",
+      "instructions": "Clean dessert station"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Rebecca",
+      "role": "Manager",
+      "instructions": "Coordinate dessert serving"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Sam",
+      "role": "Server",
+      "instructions": "Attend to last orders"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Tina",
+      "role": "Chef",
+      "instructions": "Prepare closing dishes"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Uma",
+      "role": "Cleaner",
+      "instructions": "Clean all remaining areas"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Victor",
+      "role": "Manager",
+      "instructions": "Ensure all tasks are complete"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "John",
+      "role": "Chef",
+      "instructions": "Prepare lunch"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "John",
+      "role": "Chef",
+      "instructions": "Prepare lunch"
+    }
+  ],
+  "Tuesday": [
+    {
+      "time": "9:00 AM",
+      "employee": "Alice",
+      "role": "Chef",
+      "instructions": "Prepare breakfast"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "Bob",
+      "role": "Server",
+      "instructions": "Serve tables 1-3"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "Charlie",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "David",
+      "role": "Manager",
+      "instructions": "Supervise breakfast preparations"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Eve",
+      "role": "Chef",
+      "instructions": "Prepare pastries"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Frank",
+      "role": "Server",
+      "instructions": "Handle table 4"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Grace",
+      "role": "Cleaner",
+      "instructions": "Clean kitchen"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Heidi",
+      "role": "Manager",
+      "instructions": "Monitor customer feedback"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Ivan",
+      "role": "Server",
+      "instructions": "Serve tables 5-7"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Judy",
+      "role": "Chef",
+      "instructions": "Prepare soup of the day"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Kevin",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Laura",
+      "role": "Manager",
+      "instructions": "Manage lunch shift"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Mia",
+      "role": "Chef",
+      "instructions": "Prepare lunch items"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Nathan",
+      "role": "Server",
+      "instructions": "Serve tables 8-10"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Oliver",
+      "role": "Cleaner",
+      "instructions": "Clean service counter"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Paul",
+      "role": "Manager",
+      "instructions": "Supervise lunch preparations"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Quincy",
+      "role": "Server",
+      "instructions": "Serve dessert"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Rebecca",
+      "role": "Chef",
+      "instructions": "Prepare afternoon snacks"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Sam",
+      "role": "Cleaner",
+      "instructions": "Clean restrooms"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Tina",
+      "role": "Manager",
+      "instructions": "Oversee employee break schedule"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Uma",
+      "role": "Chef",
+      "instructions": "Prepare afternoon tea"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Victor",
+      "role": "Server",
+      "instructions": "Serve drinks"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Wendy",
+      "role": "Cleaner",
+      "instructions": "Clean pantry"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Xander",
+      "role": "Manager",
+      "instructions": "Inventory check"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Yvonne",
+      "role": "Server",
+      "instructions": "Serve snacks"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Zach",
+      "role": "Chef",
+      "instructions": "Prepare special orders"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Alice",
+      "role": "Cleaner",
+      "instructions": "Clean kitchen equipment"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Bob",
+      "role": "Manager",
+      "instructions": "Check staff performance"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Charlie",
+      "role": "Chef",
+      "instructions": "Prepare dinner items"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "David",
+      "role": "Server",
+      "instructions": "Handle table reservations"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Eve",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Frank",
+      "role": "Manager",
+      "instructions": "Monitor dinner preparations"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Grace",
+      "role": "Chef",
+      "instructions": "Prepare appetizers"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Heidi",
+      "role": "Server",
+      "instructions": "Serve tables 11-13"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Ivan",
+      "role": "Cleaner",
+      "instructions": "Clean the outdoor seating area"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Judy",
+      "role": "Manager",
+      "instructions": "Coordinate dinner rush"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Kevin",
+      "role": "Server",
+      "instructions": "Serve beverages"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Laura",
+      "role": "Chef",
+      "instructions": "Prepare main courses"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Mia",
+      "role": "Cleaner",
+      "instructions": "Clean up after main course"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Nathan",
+      "role": "Manager",
+      "instructions": "Supervise kitchen operations"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Oliver",
+      "role": "Server",
+      "instructions": "Serve desserts"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Paul",
+      "role": "Chef",
+      "instructions": "Prepare desserts"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Quincy",
+      "role": "Cleaner",
+      "instructions": "Clean dessert station"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Rebecca",
+      "role": "Manager",
+      "instructions": "Coordinate dessert serving"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Sam",
+      "role": "Server",
+      "instructions": "Attend to last orders"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Tina",
+      "role": "Chef",
+      "instructions": "Prepare closing dishes"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Uma",
+      "role": "Cleaner",
+      "instructions": "Clean all remaining areas"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Victor",
+      "role": "Manager",
+      "instructions": "Ensure all tasks are complete"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Doe",
+      "role": "Server",
+      "instructions": "Serve tables 1-3"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Doe",
+      "role": "Server",
+      "instructions": "Serve tables 1-3"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Doe",
+      "role": "Server",
+      "instructions": "Serve tables 1-3"
+    }
+  ],
+  "Wednesday": [
+    {
+      "time": "9:00 AM",
+      "employee": "Alice",
+      "role": "Chef",
+      "instructions": "Prepare breakfast"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "Bob",
+      "role": "Server",
+      "instructions": "Serve tables 1-3"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "Charlie",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "David",
+      "role": "Manager",
+      "instructions": "Supervise breakfast preparations"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Eve",
+      "role": "Chef",
+      "instructions": "Prepare pastries"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Frank",
+      "role": "Server",
+      "instructions": "Handle table 4"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Grace",
+      "role": "Cleaner",
+      "instructions": "Clean kitchen"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Heidi",
+      "role": "Manager",
+      "instructions": "Monitor customer feedback"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Ivan",
+      "role": "Server",
+      "instructions": "Serve tables 5-7"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Judy",
+      "role": "Chef",
+      "instructions": "Prepare soup of the day"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Kevin",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Laura",
+      "role": "Manager",
+      "instructions": "Manage lunch shift"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Mia",
+      "role": "Chef",
+      "instructions": "Prepare lunch items"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Nathan",
+      "role": "Server",
+      "instructions": "Serve tables 8-10"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Oliver",
+      "role": "Cleaner",
+      "instructions": "Clean service counter"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Paul",
+      "role": "Manager",
+      "instructions": "Supervise lunch preparations"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Quincy",
+      "role": "Server",
+      "instructions": "Serve dessert"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Rebecca",
+      "role": "Chef",
+      "instructions": "Prepare afternoon snacks"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Sam",
+      "role": "Cleaner",
+      "instructions": "Clean restrooms"
+    },
+    {
+      "time": "13:00 PM",
+      "employee": "Tina",
+      "role": "Manager",
+      "instructions": "Oversee employee break schedule"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Uma",
+      "role": "Chef",
+      "instructions": "Prepare afternoon tea"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Victor",
+      "role": "Server",
+      "instructions": "Serve drinks"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Wendy",
+      "role": "Cleaner",
+      "instructions": "Clean pantry"
+    },
+    {
+      "time": "14:00 PM",
+      "employee": "Xander",
+      "role": "Manager",
+      "instructions": "Inventory check"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Yvonne",
+      "role": "Server",
+      "instructions": "Serve snacks"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Zach",
+      "role": "Chef",
+      "instructions": "Prepare special orders"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Alice",
+      "role": "Cleaner",
+      "instructions": "Clean kitchen equipment"
+    },
+    {
+      "time": "15:00 PM",
+      "employee": "Bob",
+      "role": "Manager",
+      "instructions": "Check staff performance"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Charlie",
+      "role": "Chef",
+      "instructions": "Prepare dinner items"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "David",
+      "role": "Server",
+      "instructions": "Handle table reservations"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Eve",
+      "role": "Cleaner",
+      "instructions": "Clean dining area"
+    },
+    {
+      "time": "16:00 PM",
+      "employee": "Frank",
+      "role": "Manager",
+      "instructions": "Monitor dinner preparations"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Grace",
+      "role": "Chef",
+      "instructions": "Prepare appetizers"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Heidi",
+      "role": "Server",
+      "instructions": "Serve tables 11-13"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Ivan",
+      "role": "Cleaner",
+      "instructions": "Clean the outdoor seating area"
+    },
+    {
+      "time": "17:00 PM",
+      "employee": "Judy",
+      "role": "Manager",
+      "instructions": "Coordinate dinner rush"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Kevin",
+      "role": "Server",
+      "instructions": "Serve beverages"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Laura",
+      "role": "Chef",
+      "instructions": "Prepare main courses"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Mia",
+      "role": "Cleaner",
+      "instructions": "Clean up after main course"
+    },
+    {
+      "time": "18:00 PM",
+      "employee": "Nathan",
+      "role": "Manager",
+      "instructions": "Supervise kitchen operations"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Oliver",
+      "role": "Server",
+      "instructions": "Serve desserts"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Paul",
+      "role": "Chef",
+      "instructions": "Prepare desserts"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Quincy",
+      "role": "Cleaner",
+      "instructions": "Clean dessert station"
+    },
+    {
+      "time": "19:00 PM",
+      "employee": "Rebecca",
+      "role": "Manager",
+      "instructions": "Coordinate dessert serving"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Sam",
+      "role": "Server",
+      "instructions": "Attend to last orders"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Tina",
+      "role": "Chef",
+      "instructions": "Prepare closing dishes"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Uma",
+      "role": "Cleaner",
+      "instructions": "Clean all remaining areas"
+    },
+    {
+      "time": "20:00 PM",
+      "employee": "Victor",
+      "role": "Manager",
+      "instructions": "Ensure all tasks are complete"
+    },
+    {
+      "time": "9:00 AM",
+      "employee": "Eve",
+      "role": "Manager",
+      "instructions": "Oversee operations"
+    },
+    {
+      "time": "10:00 AM",
+      "employee": "Eve",
+      "role": "Manager",
+      "instructions": "Oversee operations"
+    },
+    {
+      "time": "11:00 AM",
+      "employee": "Eve",
+      "role": "Manager",
+      "instructions": "Oversee operations"
+    },
+    {
+      "time": "12:00 PM",
+      "employee": "Eve",
+      "role": "Manager",
+      "instructions": "Oversee operations"
+    }
+  ]
+}
