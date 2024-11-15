@@ -69,9 +69,9 @@ const EmployeeSchedule = () => {
   };
 
   const renderChecklist = () => (
-    <div className="w-full p-4 mt-6 border border-gray-300 rounded-lg shadow-md bg-gray-50">
+    <div className="w-full p-4 mt-6 border border-gray-300 rounded-lg shadow-md bg-gray-50 max-h-auto">
       <h2 className="text-lg font-semibold text-primary mb-4">Checklist</h2>
-      <div className="mb-4 flex items-center space-x-3">
+      <div className="mb-4 flex flex-wrap space-y-2 sm:space-y-0 sm:space-x-3">
         <input
           type="text"
           value={taskInput}
@@ -95,69 +95,71 @@ const EmployeeSchedule = () => {
           Add
         </button>
       </div>
-      <ul className="space-y-2">
-        {checklist
-          .filter((task) => !task.completed)
-          .map((task) => (
-            <li
-              key={task.id}
-              className="flex items-center justify-between p-2 border rounded-md bg-white"
-            >
-              <div className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  checked={task.completed}
-                  onChange={() => toggleTaskCompletion(task.id)}
-                  className="w-5 h-5 text-green-500 focus:ring-green-500"
-                />
-                <span className="text-gray-700">{task.text}</span>
-                <span
-                  className={`text-xs px-2 py-1 rounded-full ${
-                    task.priority === "High"
-                      ? "bg-red-100 text-red-600"
-                      : task.priority === "Low"
-                      ? "bg-yellow-100 text-yellow-600"
-                      : "bg-blue-100 text-blue-600"
-                  }`}
-                >
-                  {task.priority}
-                </span>
-              </div>
-            </li>
-          ))}
-      </ul>
-      <h3 className="text-md font-semibold text-primary mt-6">Completed Tasks</h3>
-      <ul className="space-y-2">
-        {checklist
-          .filter((task) => task.completed)
-          .map((task) => (
-            <li
-              key={task.id}
-              className="flex items-center justify-between p-2 border rounded-md bg-gray-100 line-through"
-            >
-              <div className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  checked={task.completed}
-                  onChange={() => toggleTaskCompletion(task.id)}
-                  className="w-5 h-5 text-green-500 focus:ring-green-500"
-                />
-                <span className="text-gray-500">{task.text}</span>
-                <span
-                  className={`text-xs px-2 py-1 rounded-full ${
-                    task.priority === "High"
-                      ? "bg-red-100 text-red-600"
-                      : task.priority === "Low"
-                      ? "bg-yellow-100 text-yellow-600"
-                      : "bg-blue-100 text-blue-600"
-                  }`}
-                >
-                  {task.priority}
-                </span>
-              </div>
-            </li>
-          ))}
-      </ul>
+      <div className="max-h-96 overflow-auto">
+        <ul className="space-y-2">
+          {checklist
+            .filter((task) => !task.completed)
+            .map((task) => (
+              <li
+                key={task.id}
+                className="flex items-center justify-between p-2 border rounded-md bg-white"
+              >
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    checked={task.completed}
+                    onChange={() => toggleTaskCompletion(task.id)}
+                    className="w-5 h-5 text-green-500 focus:ring-green-500"
+                  />
+                  <span className="text-gray-700">{task.text}</span>
+                  <span
+                    className={`text-xs px-2 py-1 rounded-full ${
+                      task.priority === "High"
+                        ? "bg-red-100 text-red-600"
+                        : task.priority === "Low"
+                        ? "bg-yellow-100 text-yellow-600"
+                        : "bg-blue-100 text-blue-600"
+                    }`}
+                  >
+                    {task.priority}
+                  </span>
+                </div>
+              </li>
+            ))}
+        </ul>
+        <h3 className="text-md font-semibold text-primary mt-6">Completed Tasks</h3>
+        <ul className="space-y-2">
+          {checklist
+            .filter((task) => task.completed)
+            .map((task) => (
+              <li
+                key={task.id}
+                className="flex items-center justify-between p-2 border rounded-md bg-gray-100 line-through"
+              >
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    checked={task.completed}
+                    onChange={() => toggleTaskCompletion(task.id)}
+                    className="w-5 h-5 text-green-500 focus:ring-green-500"
+                  />
+                  <span className="text-gray-500">{task.text}</span>
+                  <span
+                    className={`text-xs px-2 py-1 rounded-full ${
+                      task.priority === "High"
+                        ? "bg-red-100 text-red-600"
+                        : task.priority === "Low"
+                        ? "bg-yellow-100 text-yellow-600"
+                        : "bg-blue-100 text-blue-600"
+                    }`}
+                  >
+                    {task.priority}
+                  </span>
+                </div>
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
   );
 
@@ -244,7 +246,6 @@ const EmployeeSchedule = () => {
       className="space-y-4"
     >
       <div className="grid grid-cols-[80px_1fr] gap-3">
-        {/* Time Column */}
         <div className="flex flex-col space-y-2">
           {times.map((time) => (
             <div
@@ -255,12 +256,10 @@ const EmployeeSchedule = () => {
             </div>
           ))}
         </div>
-
-        {/* Schedule Column */}
         <div className="flex flex-col space-y-2">
           {times.map((time) => {
-            const employeesAtTime = schedule[selectedDay]?.filter((entry) => entry.time === time) || [];
-
+            const employeesAtTime =
+              schedule[selectedDay]?.filter((entry) => entry.time === time) || [];
             return (
               <div
                 key={time}
@@ -306,10 +305,9 @@ const EmployeeSchedule = () => {
   );
 
   return (
-    <div className="flex flex-col items-center h-screen bg-gray-50 text-black relative p-4">
-      <div className="flex w-full max-w-6xl">
-        {/* Left Side: Days of the Week */}
-        <div className="w-1/4 bg-secondary text-white flex flex-col items-center py-4 space-y-2 rounded-r-lg shadow-md">
+    <div className="flex flex-col items-center min-h-screen bg-gray-50 text-black p-4">
+      <div className="flex flex-col md:flex-row w-full max-w-6xl">
+        <div className="w-full md:w-1/4 bg-secondary text-white flex flex-col items-center py-4 space-y-2 rounded-lg shadow-md">
           <h2 className="text-lg font-bold text-white mb-4">This Week</h2>
           {Object.keys(schedule).map((day) => (
             <button
@@ -332,20 +330,16 @@ const EmployeeSchedule = () => {
           </button>
         </div>
 
-        {/* Right Side: Scheduler View */}
-        <div className="w-3/4 p-4 overflow-y-auto relative rounded-l-lg shadow-md bg-white flex flex-col">
+        <div className="w-full md:w-3/4 p-4 overflow-y-auto relative rounded-lg shadow-md bg-white flex flex-col">
           <div className="flex-1">
             <h2 className="text-2xl font-bold text-orange-500 mb-6">Your Schedule This Week</h2>
             <AnimatePresence>{renderSchedule()}</AnimatePresence>
           </div>
         </div>
       </div>
-
-      {/* Checklist Section Below */}
       <div className="w-full max-w-6xl mt-10">
         {renderChecklist()}
       </div>
-
       <AnimatePresence>{expandedEmployee && renderEmployeeModal()}</AnimatePresence>
     </div>
   );

@@ -270,164 +270,176 @@ const Request = () => {
   const rejectedRequests = requests.filter((request) => request.status === "Rejected");
 
   return (
-    <div className="min-h-screen bg-gray-50 text-black p-8">
+    <div className="min-h-screen bg-gray-50 text-black p-4 md:p-8">
       {/* Top Section: Buttons */}
-      <div className="mb-8 flex justify-center space-x-4">
+      <div className="mb-8 flex flex-wrap justify-center space-x-2 space-y-2 md:space-y-0 md:space-x-4">
         <button
           onClick={handleTimeOffRequest}
-          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
+          className="px-3 py-2 text-xs md:text-sm font-medium bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
         >
           Request Time Off
         </button>
         <button
           onClick={handleShiftChangeRequest}
-          className="px-4 py-2 text-sm font-medium bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600"
+          className="px-3 py-2 text-xs md:text-sm font-medium bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600"
         >
           Request Shift Change
         </button>
         <button
-          className="px-4 py-2 text-sm font-medium bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600"
+          className="px-3 py-2 text-xs md:text-sm font-medium bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600"
           disabled
         >
           Custom Request (Coming Soon)
         </button>
       </div>
-
+  
       {/* Request List */}
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-bold text-primary mb-4">Your Requests</h2>
-
+      <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
+        <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">Your Requests</h2>
+  
         {/* Pending Requests */}
         <div className="mb-4">
-          <h3 className="text-xl font-semibold text-gray-700">Pending</h3>
-          <table className="w-full border-collapse border border-gray-300">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="text-left px-4 py-2 border border-gray-300">Type</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Description</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Status</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Handled By</th>
-              </tr>
-            </thead>
-            <tbody>
-              <AnimatePresence>
-                {pendingRequests.map((request) => (
-                  <motion.tr
-                    key={request.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <td className="px-4 py-2 border border-gray-300">{request.type}</td>
-                    <td className="px-4 py-2 border border-gray-300">{request.description}</td>
-                    <td
-                      className={`px-4 py-2 border border-gray-300 font-bold ${
-                        request.status === "Approved"
-                          ? "text-green-500"
-                          : request.status === "Pending"
-                          ? "text-orange-500"
-                          : "text-red-500"
-                      }`}
+          <h3 className="text-lg md:text-xl font-semibold text-gray-700">Pending</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Type</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Description</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Status</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Handled By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <AnimatePresence>
+                  {pendingRequests.map((request) => (
+                    <motion.tr
+                      key={request.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      {request.status}
-                    </td>
-                    <td className="px-4 py-2 border border-gray-300 text-gray-600">{request.handledBy}</td>
-                  </motion.tr>
-                ))}
-              </AnimatePresence>
-            </tbody>
-          </table>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300">{request.type}</td>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300">{request.description}</td>
+                      <td
+                        className={`px-2 md:px-4 py-2 border border-gray-300 font-bold ${
+                          request.status === "Approved"
+                            ? "text-green-500"
+                            : request.status === "Pending"
+                            ? "text-orange-500"
+                            : "text-red-500"
+                        }`}
+                      >
+                        {request.status}
+                      </td>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300 text-gray-600">
+                        {request.handledBy}
+                      </td>
+                    </motion.tr>
+                  ))}
+                </AnimatePresence>
+              </tbody>
+            </table>
+          </div>
         </div>
-
+  
         {/* Completed Requests */}
         <div className="mb-4">
-          <h3 className="text-xl font-semibold text-gray-700">Completed</h3>
-          <table className="w-full border-collapse border border-gray-300">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="text-left px-4 py-2 border border-gray-300">Type</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Description</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Status</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Handled By</th>
-              </tr>
-            </thead>
-            <tbody>
-              <AnimatePresence>
-                {completedRequests.map((request) => (
-                  <motion.tr
-                    key={request.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <td className="px-4 py-2 border border-gray-300">{request.type}</td>
-                    <td className="px-4 py-2 border border-gray-300">{request.description}</td>
-                    <td
-                      className={`px-4 py-2 border border-gray-300 font-bold ${
-                        request.status === "Approved"
-                          ? "text-green-500"
-                          : request.status === "Pending"
-                          ? "text-orange-500"
-                          : "text-red-500"
-                      }`}
+          <h3 className="text-lg md:text-xl font-semibold text-gray-700">Completed</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Type</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Description</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Status</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Handled By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <AnimatePresence>
+                  {completedRequests.map((request) => (
+                    <motion.tr
+                      key={request.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      {request.status}
-                    </td>
-                    <td className="px-4 py-2 border border-gray-300 text-gray-600">{request.handledBy}</td>
-                  </motion.tr>
-                ))}
-              </AnimatePresence>
-            </tbody>
-          </table>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300">{request.type}</td>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300">{request.description}</td>
+                      <td
+                        className={`px-2 md:px-4 py-2 border border-gray-300 font-bold ${
+                          request.status === "Approved"
+                            ? "text-green-500"
+                            : request.status === "Pending"
+                            ? "text-orange-500"
+                            : "text-red-500"
+                        }`}
+                      >
+                        {request.status}
+                      </td>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300 text-gray-600">
+                        {request.handledBy}
+                      </td>
+                    </motion.tr>
+                  ))}
+                </AnimatePresence>
+              </tbody>
+            </table>
+          </div>
         </div>
-
+  
         {/* Rejected Requests */}
         <div className="mb-4">
-          <h3 className="text-xl font-semibold text-gray-700">Rejected</h3>
-          <table className="w-full border-collapse border border-gray-300">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="text-left px-4 py-2 border border-gray-300">Type</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Description</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Status</th>
-                <th className="text-left px-4 py-2 border border-gray-300">Handled By</th>
-              </tr>
-            </thead>
-            <tbody>
-              <AnimatePresence>
-                {rejectedRequests.map((request) => (
-                  <motion.tr
-                    key={request.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <td className="px-4 py-2 border border-gray-300">{request.type}</td>
-                    <td className="px-4 py-2 border border-gray-300">{request.description}</td>
-                    <td
-                      className={`px-4 py-2 border border-gray-300 font-bold ${
-                        request.status === "Approved"
-                          ? "text-green-500"
-                          : request.status === "Pending"
-                          ? "text-orange-500"
-                          : "text-red-500"
-                      }`}
+          <h3 className="text-lg md:text-xl font-semibold text-gray-700">Rejected</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Type</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Description</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Status</th>
+                  <th className="text-left px-2 md:px-4 py-2 border border-gray-300">Handled By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <AnimatePresence>
+                  {rejectedRequests.map((request) => (
+                    <motion.tr
+                      key={request.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      {request.status}
-                    </td>
-                    <td className="px-4 py-2 border border-gray-300 text-gray-600">{request.handledBy}</td>
-                  </motion.tr>
-                ))}
-              </AnimatePresence>
-            </tbody>
-          </table>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300">{request.type}</td>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300">{request.description}</td>
+                      <td
+                        className={`px-2 md:px-4 py-2 border border-gray-300 font-bold ${
+                          request.status === "Approved"
+                            ? "text-green-500"
+                            : request.status === "Pending"
+                            ? "text-orange-500"
+                            : "text-red-500"
+                        }`}
+                      >
+                        {request.status}
+                      </td>
+                      <td className="px-2 md:px-4 py-2 border border-gray-300 text-gray-600">
+                        {request.handledBy}
+                      </td>
+                    </motion.tr>
+                  ))}
+                </AnimatePresence>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default Request;

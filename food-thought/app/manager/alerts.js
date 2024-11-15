@@ -57,26 +57,22 @@ const Alert = () => {
   };
 
   return (
-    <div className="bg-white text-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-3xl mx-auto mt-10">
-      <h2 className="text-4xl font-bold text-orange-500 mb-6 text-center">Alerts</h2>
-      <p className="text-gray-600 mb-8 text-center text-lg">
-        Manage alerts for employee requests, updates, AI notifications, and important tasks.
-      </p>
-
-      <div className="space-y-6 max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+    <div className="bg-white text-gray-800 p-4 md:p-8 rounded-lg shadow-2xl w-full max-w-3xl mx-auto mt-6 md:mt-10">
+  
+      <div className="space-y-4 md:space-y-6 max-h-80 md:max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
         <AnimatePresence>
           {alerts.length > 0 ? (
             alerts.map((alert) => (
               <motion.div
                 key={alert.id}
-                className="flex items-center bg-gray-50 p-5 rounded-lg shadow-md border border-gray-300"
+                className="flex flex-col md:flex-row items-start md:items-center bg-gray-50 p-4 md:p-5 rounded-lg shadow-md border border-gray-300"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="flex-1">
-                  <p className={`text-lg font-medium ${typeToColor(alert.type)}`}>
+                <div className="flex-1 mb-3 md:mb-0">
+                  <p className={`text-sm md:text-lg font-medium ${typeToColor(alert.type)}`}>
                     {alert.type === "request" ? (
                       <span className="font-semibold">Request: </span>
                     ) : alert.type === "update" ? (
@@ -93,17 +89,17 @@ const Alert = () => {
                     {alert.message}
                   </p>
                 </div>
-
-                <div className="flex space-x-4">
+  
+                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                   <button
                     onClick={() => handleAccept(alert.id)}
-                    className="px-4 py-2 text-sm font-semibold bg-green-500 hover:bg-green-600 text-white rounded-md transition-all shadow-sm"
+                    className="px-3 md:px-4 py-2 text-xs md:text-sm font-semibold bg-green-500 hover:bg-green-600 text-white rounded-md transition-all shadow-sm"
                   >
                     Accept
                   </button>
                   <button
                     onClick={() => handleReject(alert.id)}
-                    className="px-4 py-2 text-sm font-semibold bg-red-500 hover:bg-red-600 text-white rounded-md transition-all shadow-sm"
+                    className="px-3 md:px-4 py-2 text-xs md:text-sm font-semibold bg-red-500 hover:bg-red-600 text-white rounded-md transition-all shadow-sm"
                   >
                     Reject
                   </button>
@@ -112,7 +108,7 @@ const Alert = () => {
             ))
           ) : (
             <motion.p
-              className="text-gray-500 text-center py-4"
+              className="text-gray-500 text-center py-4 text-sm md:text-base"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
